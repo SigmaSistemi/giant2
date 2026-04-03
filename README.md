@@ -1,2 +1,4 @@
 # giant3
-Installazione client Giant3
+Pagina web per l'installazione del client Giant3
+
+https://sigmasistemi.github.io/giant3
