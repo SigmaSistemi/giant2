@@ -138,10 +138,15 @@
       </div>
       <h1>Giant3</h1>
       <p class="subtitle">Scarica e installa il client Giant3</p>
-      <a class="btn-download" href="GiantClient_setup.exe" download>
-        <svg viewBox="0 0 24 24"><path d="M12 16l-5-5h3V4h4v7h3l-5 5zm-7 2h14v2H5v-2z"/></svg>
-        Scarica GiantClient_setup.exe
-      </a>
+<a class="btn-download" href="GiantClient_setup.exe" download
+   onclick="window.goatcounter && window.goatcounter.count({
+     path: 'download-giantclient',
+     title: 'Download GiantClient',
+     event: true
+   })">
+  <svg viewBox="0 0 24 24"><path d="M12 16l-5-5h3V4h4v7h3l-5 5zm-7 2h14v2H5v-2z"/></svg>
+  Scarica GiantClient_setup.exe
+</a>
       <p class="meta">Windows 10 / 11 &nbsp;·&nbsp; x64</p>
       <div class="requirements">
         <h3>Requisiti</h3>
@@ -157,5 +162,7 @@
 </footer>
     </div>
   </div>
+  <script data-goatcounter="https://davidesigma.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
