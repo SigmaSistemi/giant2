@@ -10,83 +10,73 @@
 
     body {
       font-family: 'Segoe UI', sans-serif;
-      background: #f0f4f8;
-      color: #1a2a3a;
+      background: #f0f4f2;
+      color: #1a2a1e;
       min-height: 100vh;
       display: flex;
-      flex-direction: column;
-    }
-
-    header {
-      background: #ffffff;
-      border-bottom: 1px solid #dce4ed;
-      padding: 18px 40px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    header img { height: 32px; }
-
-    header span {
-      font-size: 18px;
-      font-weight: 600;
-      color: #1a2a3a;
-      letter-spacing: 0.5px;
-    }
-
-    main {
-      flex: 1;
-      display: flex;
-      align-items: center;
+      align-items: stretch;
       justify-content: center;
-      padding: 60px 20px;
     }
 
-    .card {
-      background: #ffffff;
-      border: 1px solid #dce4ed;
-      border-radius: 16px;
-      padding: 50px 60px;
-      max-width: 560px;
+    .wrapper {
+      display: flex;
+      max-width: 860px;
       width: 100%;
-      text-align: center;
-      box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+      min-height: 100vh;
+      box-shadow: 0 0 60px rgba(0,0,0,0.12);
     }
 
-    .app-icon {
-      width: 120px;
-      height: 120px;
-      margin: 0 auto 24px;
+    .sidebar {
+      width: 220px;
+      flex-shrink: 0;
+      background: #006655;
+      overflow: hidden;
+    }
+
+    .sidebar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+
+    .content {
+      flex: 1;
+      background: #ffffff;
       display: flex;
-      align-items: center;
+      flex-direction: column;
       justify-content: center;
+      padding: 60px 50px;
     }
 
-    .app-icon img {
-      width: 120px;
-      height: 120px;
+    .logo {
+      margin-bottom: 40px;
+    }
+
+    .logo img {
+      height: 48px;
       object-fit: contain;
     }
 
     h1 {
-      font-size: 32px;
+      font-size: 36px;
       font-weight: 700;
-      color: #1a2a3a;
+      color: #006655;
       margin-bottom: 8px;
     }
 
     .subtitle {
       font-size: 15px;
-      color: #5a7a9a;
-      margin-bottom: 36px;
+      color: #6a8a7a;
+      margin-bottom: 40px;
     }
 
     .btn-download {
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      background: #1a6fa8;
+      background: #006655;
       color: #ffffff;
       text-decoration: none;
       font-size: 16px;
@@ -94,10 +84,11 @@
       padding: 14px 32px;
       border-radius: 10px;
       transition: background 0.2s, transform 0.1s;
+      align-self: flex-start;
     }
 
     .btn-download:hover {
-      background: #156092;
+      background: #005545;
       transform: translateY(-1px);
     }
 
@@ -106,39 +97,39 @@
     .btn-download svg {
       width: 20px; height: 20px;
       fill: white;
+      flex-shrink: 0;
     }
 
     .meta {
-      margin-top: 20px;
+      margin-top: 14px;
       font-size: 12px;
-      color: #8aaac8;
+      color: #aabcb4;
     }
 
     .requirements {
-      margin-top: 36px;
-      padding-top: 28px;
-      border-top: 1px solid #dce4ed;
-      text-align: left;
+      margin-top: 48px;
+      padding-top: 32px;
+      border-top: 1px solid #e0ece8;
     }
 
     .requirements h3 {
-      font-size: 12px;
+      font-size: 11px;
       text-transform: uppercase;
       letter-spacing: 1px;
-      color: #8aaac8;
-      margin-bottom: 12px;
+      color: #aabcb4;
+      margin-bottom: 14px;
     }
 
     .requirements ul {
       list-style: none;
       display: flex;
       flex-direction: column;
-      gap: 6px;
+      gap: 8px;
     }
 
     .requirements li {
       font-size: 13px;
-      color: #5a7a9a;
+      color: #5a7a6a;
       display: flex;
       align-items: center;
       gap: 8px;
@@ -146,30 +137,34 @@
 
     .requirements li::before {
       content: '✓';
-      color: #1a6fa8;
+      color: #006655;
       font-weight: bold;
     }
 
     footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 12px;
-      color: #aac0d8;
+      margin-top: 48px;
+      font-size: 11px;
+      color: #c0d4cc;
+    }
+
+    @media (max-width: 600px) {
+      .sidebar { display: none; }
+      .content { padding: 40px 28px; }
     }
   </style>
 </head>
 <body>
+  <div class="wrapper">
 
-  <header>
-    <img src="logoSigma.png" alt="Sigma Sistemi" onerror="this.style.display='none'" />
-    <span>Sigma Sistemi</span>
-  </header>
+    <div class="sidebar">
+      <img src="swHouse.png" alt="" />
+    </div>
 
-  <main>
-    <div class="card">
-      <div class="app-icon">
-        <img src="logoSigma.png" alt="Giant3" />
+    <div class="content">
+      <div class="logo">
+        <img src="logoSigma.png" alt="Sigma Sistemi" />
       </div>
+
       <h1>Giant3</h1>
       <p class="subtitle">Scarica e installa il client Giant3</p>
 
@@ -188,12 +183,10 @@
           <li>.NET 10 (installato automaticamente)</li>
         </ul>
       </div>
+
+      <footer>&copy; Sigma Sistemi</footer>
     </div>
-  </main>
 
-  <footer>
-    &copy; Sigma Sistemi
-  </footer>
-
+  </div>
 </body>
 </html>
