@@ -1,0 +1,15 @@
+name: Pubblica su winget-pkgs
+
+on:
+  release:
+    types: [released]
+
+jobs:
+  publish:
+    runs-on: windows-latest # winget-releaser richiede windows-latest
+    steps:
+      - uses: vedantmgoyal2009/winget-releaser@v2
+        with:
+          identifier: SigmaSistemi.Giant2
+          installers-regex: '\.msi$' # considera solo gli asset .msi allegati alla release
+          token: ${{ secrets.WINGET_TOKEN }}
