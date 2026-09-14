@@ -3,6 +3,16 @@ Pagina web per l'installazione del client Giant2
 
 https://sigmasistemi.github.io/giant2
 
+## Installazione rapida da terminale
+
+In attesa dell'approvazione del pacchetto su winget, è disponibile anche uno script `install.ps1` che scarica ed esegue l'ultimo `Giant2.5_setup.msi` pubblicato:
+
+```powershell
+irm https://sigmasistemi.github.io/giant2/install.ps1 | iex
+```
+
+Lo script scarica il file in una cartella temporanea e lancia `msiexec /i`, poi elimina il file scaricato.
+
 ## Pubblicare una nuova versione
 
 Il pacchetto è disponibile anche su winget (`winget install giant2` / `SigmaSistemi.Giant2`). L'aggiornamento del manifest winget è **automatico**, ma solo se segui questa procedura — non basta più sovrascrivere il file `.msi` nel repo.
